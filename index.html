@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGen - Static Practice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; background: #f9f9f9; }
+        .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        #question-area { font-size: 1.5rem; margin-bottom: 2rem; padding: 20px; border-left: 5px solid #007bff; background: #eef7ff; }
+        .controls { display: flex; gap: 10px; margin-bottom: 20px; }
+        button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .btn-next { background: #007bff; color: white; }
+        .btn-show { background: #6c757d; color: white; }
+        button:hover { opacity: 0.9; }
+        #solution-area { display: none; margin-top: 20px; padding: 20px; border-top: 2px dashed #ddd; }
+        .step { margin-bottom: 10px; color: #444; }
+        .final-answer { font-weight: bold; color: #28a745; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Math Practice</h1>
+    <div id="question-area">Loading question...</div>
+    
+    <div class="controls">
+        <button class="btn-next" onclick="generateNewProblem()">Next Question</button>
+        <button class="btn-show" onclick="toggleSolution()">Show Solution</button>
+    </div>
+
+    <div id="solution-area">
+        <h3>Step-by-Step Solution:</h3>
+        <div id="steps-list"></div>
+        <hr>
+        <div id="final-answer-display"></div>
+    </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
